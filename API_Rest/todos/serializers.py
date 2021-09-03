@@ -5,4 +5,4 @@ class TodoSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Todo
-        fields = ('tittle', 'description', 'is_complete')
+        fields = ('id', 'tittle', 'description', 'is_complete')
