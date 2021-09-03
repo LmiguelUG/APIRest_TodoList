@@ -56,7 +56,7 @@ class User(AbstractBaseUser, PermissionsMixin, TrackingModel):
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email', 'password']
+    REQUIRED_FIELDS = ['password']
 
     @property
     def token(self):
