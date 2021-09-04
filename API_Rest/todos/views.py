@@ -32,8 +32,8 @@ class TodosAPIView(ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
 
-    filterset_fields = ['id', 'tittle', 'description', 'is_complete']
-    search_fields = ['id', 'tittle', 'description', 'is_complete']
+    filterset_fields = ['id', 'title', 'description', 'is_complete']
+    search_fields = ['id', 'title', 'description', 'is_complete']
 
     def perform_create(self, serializer):
         return serializer.save( owner = self.request.user)
